@@ -10,9 +10,7 @@
         <!-- CSS -->
         <link href="views/style.css" rel="stylesheet" type="text/css"/>
 
-
         <title>Moodslider 2.0</title>
-
     </head>
 
     <body>
@@ -29,7 +27,7 @@
                     <!-- Title Bar -->
                     <div class ="jumbotron jumbotron-fluid">  
                         <h4>Mood Slider</h4> 
-                        <p class="lead">Please move the sliders to suit your mood. You will see a selection of contents for you.</p>
+                        <p class="lead">Please move the sliders to suit your mood. You will see a selection of contents selected for you.</p>
                     </div>
                     <!-- Nav Bar -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
@@ -51,68 +49,67 @@
                                         </div>
                                         <div class="input-group-append">
                                             <input type="submit" value="Upload Content" name="submit" class="input-group-text" >
-<!--                                            <span class="input-group-text" id="">Upload</span>-->
                                         </div>
                                     </div>
                                 </form>   
                             </li>
                         </ul>
                     </nav>
-                    <!--                </div>-->
                 </div>
             </div>
             <br>
             <!-- 4 sliders -->
-            <div class ="container" style="margin-top:0px">
+            <div class ="container">
                 <div class="row">
-                    <div class="col-sm text-right">
+                    <div class="col-sm text-right my-auto">
                         <h5>Agitated</h5>    
                     </div>
                     <div class="col-sm">
                         <input type="range" min="1" max="3" value="2" class="slider" id="Range1">
                     </div>
-                    <div class="col-sm">
+                    <div class="col-sm my-auto">
                         <h5>Calm</h5>    
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm text-right">
+                    <div class="col-sm text-right my-auto ">
                         <h5>Happy</h5>    
                     </div>
                     <div class="col-sm">
                         <input type="range" min="1" max="3" value="2" class="slider" id="Range2">
                     </div>
-                    <div class="col-sm">
+                    <div class="col-sm my-auto">
                         <h5>Sad</h5>    
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm text-right">
+                    <div class="col-sm text-right my-auto">
                         <h5>Tired</h5>    
                     </div>
                     <div class="col-sm">
                         <input type="range" min="1" max="3" value="2" class="slider" id="Range3">
                     </div>
-                    <div class="col-sm">
+                    <div class="col-sm my-auto">
                         <h5>Wide Awake</h5>    
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm text-right">
+                    <div class="col-sm text-right my-auto">
                         <h5>Scared</h5>    
                     </div>
                     <div class="col-sm">
                         <input type="range" min="1" max="3" value="2" class="slider" id="Range4">
                     </div>
-                    <div class="col-sm">
+                    <div class="col-sm my-auto">
                         <h5>Fearless</h5>    
                     </div>
                 </div>
             </div>
+            <br>
 
             <!-- 5 card decks for movies -->
-            <div class="card-deck mx-auto" style="margin:5px">
+            <div class="card-deck mx-auto" >
                 <div class="card" id="0">
                     <img class="card-img-top" src="resources/noContent.jpg" alt="No content">
                     <div class="card-body">
@@ -144,9 +141,9 @@
                     </div>
                 </div>
             </div> 
-        <!-- Javascript -->
-        <script src="views/javascript.js" type="text/javascript"></script>
-            <!-- Optional JavaScript -->
+
+            <!-- Javascript -->
+            <script src="views/javascript.js" type="text/javascript"></script>
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
