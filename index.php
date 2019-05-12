@@ -9,10 +9,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <!-- CSS -->
         <link href="views/style.css" rel="stylesheet" type="text/css"/>
-        <!-- Javascript -->
-        <script src="views/javascript.js" type="text/javascript"></script>
 
-        <title>Moodslider</title>
+
+        <title>Moodslider 2.0</title>
 
     </head>
 
@@ -70,7 +69,7 @@
                         <h5>Agitated</h5>    
                     </div>
                     <div class="col-sm">
-                        <input type="range" min="1" max="3" value="2" class="slider" id="Range1" onchange="displayMovies(this.value)">
+                        <input type="range" min="1" max="3" value="2" class="slider" id="Range1">
                     </div>
                     <div class="col-sm">
                         <h5>Calm</h5>    
@@ -82,7 +81,7 @@
                         <h5>Happy</h5>    
                     </div>
                     <div class="col-sm">
-                        <input type="range" min="4" max="6" value="5" class="slider" id="Range2" onchange="displayMovies(this.value)">
+                        <input type="range" min="1" max="3" value="2" class="slider" id="Range2">
                     </div>
                     <div class="col-sm">
                         <h5>Sad</h5>    
@@ -93,7 +92,7 @@
                         <h5>Tired</h5>    
                     </div>
                     <div class="col-sm">
-                        <input type="range" min="7" max="9" value="8" class="slider" id="Range3" onchange="displayMovies(this.value)">
+                        <input type="range" min="1" max="3" value="2" class="slider" id="Range3">
                     </div>
                     <div class="col-sm">
                         <h5>Wide Awake</h5>    
@@ -104,7 +103,7 @@
                         <h5>Scared</h5>    
                     </div>
                     <div class="col-sm">
-                        <input type="range" min="10" max="12" value="11" class="slider" id="Range4" onchange="displayMovies(this.value)">
+                        <input type="range" min="1" max="3" value="2" class="slider" id="Range4">
                     </div>
                     <div class="col-sm">
                         <h5>Fearless</h5>    
@@ -145,7 +144,8 @@
                     </div>
                 </div>
             </div> 
-
+        <!-- Javascript -->
+        <script src="views/javascript.js" type="text/javascript"></script>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
