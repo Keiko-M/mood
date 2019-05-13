@@ -91,7 +91,6 @@ function displayMovies(value) {
         url: "controller/moodslider_controller.php",
         data: "mood=" + JSON.stringify(value),
         success: function (result) {
-            console.log(result);
             splitString(result);
         }
     });
