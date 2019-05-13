@@ -23,22 +23,13 @@ img {
 }
 
 .jumbotron {
-    padding:4em 4em;
-    margin-bottom: 0px;
     border-radius: 0px;
     overflow: hidden;
-    height: 30px;
-}
-
-.helper{
-    padding:1em 1em;
-    display: inline-block;
-    height: 80%;
-    vertical-align: middle;
+    height: 210px;
 }
 
 .card-deck {
-    width: 70%;
+    width: 80%;
 }
 
 .slidecontainer {

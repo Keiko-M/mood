@@ -1,8 +1,10 @@
+//get value 1-3 from each slider range
 var Range1 = document.getElementById("Range1");
 var Range2 = document.getElementById("Range2");
 var Range3 = document.getElementById("Range3");
 var Range4 = document.getElementById("Range4");
 
+//Run function updateContent() when the value changes
 Range1.onchange = function () {
     updateContent();
 }
@@ -19,6 +21,7 @@ Range4.onchange = function () {
     updateContent();
 }
 
+// Converts the value to moods 
 function slider1Value() {
     if (Range1.value == 1) {
         return "Agitated";
@@ -59,12 +62,9 @@ function slider4Value() {
     }
 }
 
-function getSliderValues() {
-    return {"label1": slider1Value(), "label2": slider2Value(), "label3": slider3Value(), "label4": slider4Value()};
-}
-
+//Create variable messageJSON based on slider values. If empty, reset the cards. Otherwise run fuction displayMovies(messageJSON)
 function updateContent() {
-    messageJSON = getSliderValues();
+    var messageJSON = {"label1": slider1Value(), "label2": slider2Value(), "label3": slider3Value(), "label4": slider4Value()}
     if (messageJSON.label1 == "" && messageJSON.label2 == "" && messageJSON.label3 == "" && messageJSON.label4 == "") {
         resetCards();
     } else {
@@ -72,6 +72,16 @@ function updateContent() {
     }
 }
 
+//Reset the card and show "No content"
+function resetCards() {
+    var i;
+    for (i = 0; i < 5; i++) {
+        var card = '<img class="card-img-top" src="resources/noContent.jpg"><div class="card-body"><h5 class="card-title">No content</h5></div>';
+        document.getElementById(i).innerHTML = card;
+    }
+}
+
+//send user inputs as string to controller and get the result. Run function splitString with the result
 function displayMovies(value) {
     $.ajax({
         type: "GET",
@@ -82,7 +92,7 @@ function displayMovies(value) {
         }
     });
 }
-
+//Split response from controller. 
 function splitString(input) {
     var movieSplit = input.split(";");
     var i;
@@ -94,10 +104,5 @@ function splitString(input) {
         document.getElementById(i).innerHTML = card;
     }
 }
-function resetCards() {
-    var i;
-    for (i = 0; i < 5; i++) {
-        var card = '<img class="card-img-top" src="resources/noContent.jpg"><div class="card-body"><h5 class="card-title">No content</h5></div>';
-        document.getElementById(i).innerHTML = card;
-    }
-}
+
+
