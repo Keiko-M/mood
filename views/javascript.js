@@ -21,7 +21,7 @@ Range4.onchange = function () {
     updateContent();
 }
 
-// Converts the value to moods 
+// Converts the slider value to text mood value 
 function slider1Value() {
     if (Range1.value == 1) {
         return "Agitated";
@@ -32,6 +32,7 @@ function slider1Value() {
     }
 }
 
+// Converts the slider value to text mood value
 function slider2Value() {
     if (Range2.value == 1) {
         return "Happy";
@@ -42,6 +43,7 @@ function slider2Value() {
     }
 }
 
+// Converts the slider value to text mood value
 function slider3Value() {
     if (Range3.value == 1) {
         return "Tired";
@@ -52,6 +54,7 @@ function slider3Value() {
     }
 }
 
+// Converts the slider value to text mood value
 function slider4Value() {
     if (Range4.value == 1) {
         return "Scared";
@@ -88,20 +91,25 @@ function displayMovies(value) {
         url: "controller/moodslider_controller.php",
         data: "mood=" + JSON.stringify(value),
         success: function (result) {
+            console.log(result);
             splitString(result);
         }
     });
 }
-//Split response from controller. 
+//Parse returned value from controller, extract five movie string and use these to update the five cards on the page
 function splitString(input) {
-    var movieSplit = input.split(";");
-    var i;
-    for (i = 0; i < 5; i++) {
-        var movie = movieSplit[i].split(",");
-        var image = movie[0];
-        var name = movie[1];
-        var card = '<img class="card-img-top" src="' + image + '"> <div class="card-body"><h5 class="card-title">' + name + '</h5></div>';
-        document.getElementById(i).innerHTML = card;
+    if (input == "Error: Cannot create object") {
+        resetCards();
+    } else {
+        var movieSplit = input.split(";");
+        var i;
+        for (i = 0; i < 5; i++) {
+            var movie = movieSplit[i].split(",");
+            var image = movie[0];
+            var name = movie[1];
+            var card = '<img class="card-img-top" src="' + image + '"> <div class="card-body"><h5 class="card-title">' + name + '</h5></div>';
+            document.getElementById(i).innerHTML = card;
+        }
     }
 }
 

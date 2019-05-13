@@ -24,7 +24,7 @@
                             <img src="../resources/sky.png" class="img-fluid center-block" alt=""/></a>
                     </div>
                     <div class="col-10">
-                        <h1>Mood Slider</h1> 
+                        <h1>Mood Slider 2.0</h1> 
                         <p class="lead">Please move the sliders to select movies for your moods.</p>
                     </div>  
                 </div> 
